@@ -3,7 +3,7 @@ const dotenv = require("dotenv")
 
 dotenv.config()
 
-const wss = new WebSocketServer({ port:process.env.PORT || 8080 })
+const wss = new WebSocketServer("wss://chat-39f1.onrender.com")
 
 wss.on("connection", (ws) => {
     ws.on("error", console.error)
